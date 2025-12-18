@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prachi's Birthday Countdown ❤️</title>
+    <meta name="description" content="A special countdown for Prachi's birthday">
+    <meta name="theme-color" content="#8B0000">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Background Elements -->
+        <div class="hearts-container" id="heartsContainer"></div>
+        <div class="confetti-container" id="confettiContainer"></div>
+        
+        <!-- Main Content -->
+        <header class="header">
+            <h1 class="title">For My Love, <span class="highlight">Prachi</span> ❤️</h1>
+            <p class="subtitle">Counting down to your special day</p>
+        </header>
+        
+        <main class="main-content">
+            <!-- Countdown Timer -->
+            <div class="countdown-section">
+                <div class="countdown-container">
+                    <h2 class="countdown-title">Time Until Your Birthday</h2>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="days">00</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="hours">00</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="minutes">00</div>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="seconds">00</div>
+                            <div class="countdown-label">Seconds</div>
+                        </div>
+                    </div>
+                    <div class="birthday-date">4th February, 2026</div>
+                </div>
+                
+                <!-- Heart Animation Display -->
+                <div class="heart-display" id="heartDisplay">
+                    <div class="heart-animation">
+                        <i class="fas fa-heart main-heart"></i>
+                        <div class="heart-pulse"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Daily Message Display -->
+            <div class="message-section">
+                <div class="message-header">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>Today's Love Message</h3>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="message-container">
+                    <p class="love-message" id="dailyMessage">Loading today's special message for you...</p>
+                    <div class="message-footer">
+                        <i class="fas fa-heart"></i>
+                        <span class="message-day" id="messageDay">Day 0</span>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Notification Controls -->
+            <div class="notification-section">
+                <h3><i class="fas fa-bell"></i> Daily Reminders</h3>
+                <p class="notification-info">Get a romantic countdown message every day until your birthday!</p>
+                <div class="notification-controls">
+                    <button class="btn" id="enableNotifications">
+                        <i class="fas fa-bell"></i> Enable Daily Notifications
+                    </button>
+                    <button class="btn btn-secondary" id="testNotification">
+                        <i class="fas fa-play"></i> Test Notification
+                    </button>
+                </div>
+                <p class="notification-status" id="notificationStatus">Notifications are disabled</p>
+            </div>
+            
+            <!-- Special Birthday Display (Hidden by default) -->
+            <div class="birthday-section" id="birthdaySection">
+                <div class="birthday-content">
+                    <h1 class="birthday-title">Happy Birthday My Love! ❤️</h1>
+                    <div class="birthday-animation">
+                        <i class="fas fa-birthday-cake"></i>
+                        <i class="fas fa-gift"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="birthday-message" id="birthdayMessage"></p>
+                    <button class="btn btn-birthday" id="surpriseBtn">
+                        <i class="fas fa-gift"></i> A Surprise For You
+                    </button>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>Made with <i class="fas fa-heart"></i> for Prachi</p>
+            <p class="footer-note">This countdown started on 18th December, 2025</p>
+        </footer>
+    </div>
+    
+    <!-- Audio for background music -->
+    <audio id="bgMusic" loop preload="auto">
+        <!-- We'll use a heartbeat-like sound or gentle piano music -->
+        <!-- In production, add a royalty-free romantic music track -->
+        <source src="https://assets.mixkit.co/music/preview/mixkit-romantic-sunset-687.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Notification sound -->
+    <audio id="notificationSound" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-happy-birthday-horn-576.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
